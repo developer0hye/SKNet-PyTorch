@@ -1,5 +1,5 @@
 # SKNet-Pytorch
-Nearly Perfect &amp; Easily Understandable Implementation of [SKNET(Selective Kernel Networks)](https://arxiv.org/abs/1903.06586) by PyTorch
+Nearly Perfect &amp; Easily Understandable PyTorch Implementation of [SKNet(Selective Kernel Networks)](https://arxiv.org/abs/1903.06586)
 
 I reimplemented SKNET using PyTorch. Although there are several PyTorch implementations of SKNET, they are different from implementation described in the original paper, and I was hard to understand their implementations, so I reimplemented SKNET.
 
