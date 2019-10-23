@@ -41,11 +41,7 @@ class SKConv(nn.Module):
         
         batch_size = x.shape[0]
         
-        feats = []
-        
-        for conv in self.convs:
-            feats.append(conv(x))
-        
+        feats = [conv(x) for conv in self.convs]      
         feats = torch.cat(feats, dim=1)
         feats = feats.view(batch_size, self.M, self.features, feats.shape[2], feats.shape[3])
         
@@ -53,14 +49,9 @@ class SKConv(nn.Module):
         feats_S = self.gap(feats_U)
         feats_Z = self.fc(feats_S)
 
-        attention_vectors = []
-
-        for fc in self.fcs:
-            attention_vectors.append(fc(feats_Z))
-        
+        attention_vectors = [fc(feats_Z) for fc in self.fcs]
         attention_vectors = torch.cat(attention_vectors, dim=1)
         attention_vectors = attention_vectors.view(batch_size, self.M, self.features, 1, 1)
-        
         attention_vectors = self.softmax(attention_vectors)
         
         feats_V = torch.sum(feats*attention_vectors, dim=1)
