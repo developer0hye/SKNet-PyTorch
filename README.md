@@ -7,7 +7,7 @@ I reimplemented SKNET using PyTorch. Although there are several PyTorch implemen
 
 <img src="./figures/SKConv.png">
 
-Refer to [this part](https://github.com/developer0hye/SKNet-PyTorch/blob/df5a4fea2e0eb3a917b5ca099ad220d81ce0c983/sknet.py#L7-L68) for the implementation of Selective Kernel Convolution
+Refer to [this part](https://github.com/developer0hye/SKNet-PyTorch/blob/4e299e61a9acba35704112078746348150bf4dd4/sknet.py#L7-L59) for the implementation of Selective Kernel Convolution
 
 # Reference
 - Paper: [Selective Kernel Networks](https://arxiv.org/abs/1903.06586)
