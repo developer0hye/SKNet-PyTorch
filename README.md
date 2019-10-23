@@ -15,3 +15,6 @@ Refer to [this part](https://github.com/developer0hye/SKNet-PyTorch/blob/4e299e6
 - Repository: [pppLang/SKNet](https://github.com/pppLang/SKNet)
 - Repository: [ResearchingDexter/SKNet_pytorch](https://github.com/ResearchingDexter/SKNet_pytorch)
 - Repository: [bearpaw/pytorch-classification](https://github.com/bearpaw/pytorch-classification/blob/master/models/imagenet/resnext.py)
+
+# To Do Lists
+- Experiment on CIFAR100 with Resnet-18
