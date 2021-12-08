@@ -24,12 +24,12 @@ class SKConv(nn.Module):
             self.convs.append(nn.Sequential(
                 nn.Conv2d(features, features, kernel_size=3, stride=stride, padding=1+i, dilation=1+i, groups=G, bias=False),
                 nn.BatchNorm2d(features),
-                nn.ReLU(inplace=False)
+                nn.ReLU(inplace=True)
             ))
         self.gap = nn.AdaptiveAvgPool2d((1,1))
         self.fc = nn.Sequential(nn.Conv2d(features, d, kernel_size=1, stride=1, bias=False),
                                 nn.BatchNorm2d(d),
-                                nn.ReLU(inplace=False))
+                                nn.ReLU(inplace=True))
         self.fcs = nn.ModuleList([])
         for i in range(M):
             self.fcs.append(
